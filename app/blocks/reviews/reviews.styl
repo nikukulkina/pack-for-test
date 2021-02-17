@@ -1,0 +1,41 @@
+.reviews
+	display block
+	background-color #fff
+	&__wrap
+		padding 35px 30px
+
+	&__slider-wrap
+		margin-top 20px
+		overflow hidden
+		display flex
+	&__btn-wrap
+		width 100%
+		max-width 124px
+	&__bottom
+		margin-top 33px
+		display flex
+		justify-content space-between
+		align-items center
+	&__slider-dots
+		margin-top 2px
+		width 100%
+		max-width 93px
+		display flex
+		justify-content space-between
+		align-items center
+	&__dot
+		border none
+		outline none
+		width 4px
+		height 4px
+		border-radius 50%
+		background-color #212121
+		transition color .3s ease-in, transform .3s ease-in
+		&:hover
+			background-color #FF4641
+	&__slider-inner-wrap
+		position relative
+		display flex
+.active
+	transform scale(2)
+	background-color #FF4641

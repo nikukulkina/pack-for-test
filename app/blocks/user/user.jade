@@ -1,0 +1,8 @@
+mixin user(user)
+	+b.user&attributes(attributes)
+		+e.wrap
+			+e.pic-wrap
+				+e('img').userpic(src!=user.userpic)
+			+e.about-wrap
+				+e.name!=user.username 
+				+e.descr!=user.descr

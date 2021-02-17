@@ -1,0 +1,4 @@
+mixin gallery-item(src)
+	+b.gallery-item&attributes(attributes)
+		+e('button').wrap.js-gallery
+			+e('img').img(src!=src)

@@ -1,0 +1,6 @@
+mixin popup-pic()
+	+b.popup-pic.js-popup-pic&attributes(attributes)
+		+e('button').close.js-close
+			+e('img').cross(src='./images/close.png')
+		+e.wrap.js-popup-inner
+			+e(img).img.js-popup-image(src='./images/img1.jpg')

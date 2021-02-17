@@ -1,0 +1,18 @@
+include /blocks/container/container
+include /blocks/overlay/overlay
+include /blocks/article/article
+include /blocks/reviews/reviews
+include /blocks/popup-pic/popup-pic
+include /blocks/chat/chat
+
+
+mixin page-main()
+	+b.page-main&attributes(attributes)
+		+overlay()
+		+popup-pic()
+		+container()
+			+article()
+			+reviews()
+			+e('article').chats-wrap
+				+chat({userpic:'./images/chatuserpic2.png', username:'Наталия Полянская', descr:'Гид по Баварии, фотограф'}, 'Чат с пользователем', 'user')
+				+chat({userpic:'./images/chatuserpic1.png', username:'Администратор', descr:'Travel Ask'}, 'Чат с администратором', 'admin')

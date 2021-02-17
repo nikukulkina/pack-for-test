@@ -1,0 +1,7 @@
+mixin section-title(main, sub)
+	+b.section-title&attributes(attributes)
+		if sub
+			+e('h2').main!=main
+			+e('p').sub!=sub
+		else
+			+e('h2').main!=main

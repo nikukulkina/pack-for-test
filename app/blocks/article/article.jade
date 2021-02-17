@@ -1,0 +1,12 @@
+include /blocks/section-title/section-title
+include /blocks/link/link
+
+mixin article()
+	+b('article').article&attributes(attributes)
+		+e.wrap 
+			+e.pic-wrap
+				+e('img').img(src='./images/main.jpg')
+			+e.text-wrap
+				+section-title('Барселона — обзор города')
+				+e('p').text Барселона с её золотистыми пляжами, архитектурными шедеврами Гауди, многочисленными фестивалями и гастрономическим разнообразием понравилась мне в первый же день пребывания и стала местом, в котором...
+				+link('#', 'Читать дальше')

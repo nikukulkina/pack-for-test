@@ -1,0 +1,35 @@
+include /blocks/gallery-item/gallery-item
+
+mixin review-item(username, text, time, comments, likes, data, slide)
+	+b.review-item(data-slide!=slide)&attributes(attributes)
+		+e.wrap
+			+e.wrapper
+				+e.user
+					+e.userpic-wrap
+						+e('img').img(src='./images/userpic.png')
+					+e('span').username!=username
+				+e.title Барселона 
+					+e('span').title_reg &#8212; о городе:
+				+e.text!=text
+			+e.wrapper
+				+e.gallery-wrap
+					+gallery-item('./images/img1.jpg')
+					+gallery-item('./images/img2.jpg')
+					+gallery-item('./images/img3.jpg')
+					+e.fancy-gallery-wrap
+						+e('a').inner-wrap(href='./images/img3.jpg' data-fancybox!=data)
+							+e('img').pic(src='./images/img3.jpg')
+							+e.few + 7
+							+e('a').link(href='./images/img1.jpg' data-fancybox!=data)
+							+e('a').link(href='./images/img2.jpg' data-fancybox!=data)
+							+e('a').link(href='./images/img3.jpg' data-fancybox!=data)
+							+e('a').link(href='./images/img1.jpg' data-fancybox!=data)
+							+e('a').link(href='./images/img2.jpg' data-fancybox!=data)
+							+e('a').link(href='./images/img3.jpg' data-fancybox!=data)
+
+				+e.bottom
+					+e.time!=time
+					+e.comments-wrap
+						+e('a').comments(href='#')!=comments
+					+e('button').likes-wrap(type='button')
+						+e.likes!=likes

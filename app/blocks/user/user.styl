@@ -1,0 +1,33 @@
+.user
+	display block
+	&__pic-wrap
+		margin-right 20px
+		width 44px
+		height 44px
+		border-radius 50%
+		overflow hidden
+	&__userpic
+		width 100%
+		height auto
+	&__wrap
+		display flex
+		align-items center
+	&__name
+		margin-bottom 3px
+		font-size 18px
+		line-height 17px
+		font-weight 700
+	&__descr
+		position relative
+		font-size 13px
+		line-height 17px
+		color #FF4641
+		padding-left 10px
+		&::before
+			position absolute
+			width 8px
+			height 10px
+			background-image url('./../../images/flag.png')
+			content ''
+			top 4px
+			left 0

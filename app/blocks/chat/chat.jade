@@ -1,0 +1,17 @@
+include /blocks/section-title/section-title
+include /blocks/user/user
+
+mixin chat(user, title, name)
+	+b.chat&attributes(attributes)
+		+section-title(title)
+		+e.wrap
+			+e.user-wrap
+				+user(user)
+			+e.chat
+			+e.send
+				+e.pic-wrap 
+					+e('img').pic(src!=user.userpic)
+				+e('form').form.js-form(action="" method="method" name!=name)
+					+e('input').message.js-input(type='text' placeholder='Напишите сообщение...' value='')
+					+e('button').button.js-send-btn(type='submit')
+						+e('img').btn-img(src='./images/send.png')
